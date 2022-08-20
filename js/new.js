@@ -33,16 +33,46 @@
 //};
 //
 //
-//$(window).scroll(function(){
+////$(window).scroll(function(){
+////	console.log("news: ");
+////	console.log(getOffset(newsElement));
+////	console.log("page: ");
+////	console.log(newsElement.getBoundingClientRect());
+////
+//////	console.log(window.scrollX);
+//////	console.log(window.scrollY);
+//////	$(".scrollable").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "fast" );
+////});
+//
+//
+////
+////document.addEventListener('scroll', function (event) {
+////    if (document.body.scrollHeight == 
+////        document.body.scrollTop +        
+////        window.innerHeight) {
+////        alert("Bottom!");
+////    }
+////});
+//
+//document.onscroll = function() {
+//	var newsBounding = newsElement.getBoundingClientRect();
 //	console.log("news: ");
 //	console.log(getOffset(newsElement));
 //	console.log("page: ");
-//	console.log(newsElement.getBoundingClientRect());
-//	conso
-////	console.log(window.scrollX);
+//	console.log(newsBounding);
+////	console.log("window: ");
 ////	console.log(window.scrollY);
-//	$(".scrollable").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "fast" );
-//});
+////	console.log(window.innerHeight);
+////	console.log(document.body.scrollHeight);
+////    if(window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+////        alert('bottom');
+////    }
+//	if (newsBounding.y <= 0) {
+////		newsElement.scrollTop -= newsBounding.y;
+//		$("#news").css({"position":"fixed","top":"6em","left":10});
+//	}
+//}
+
 
 $(function () {
   var includes = $('[data-include]')
@@ -51,3 +81,6 @@ $(function () {
     $(this).load(file)
   })
 })
+
+
+
